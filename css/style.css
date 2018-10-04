@@ -342,7 +342,7 @@ nav > ul li a:hover {
 	display: block;
 	width: 1em;
 	height: 1em;
-	outline: 10px solid orange;
+	//*outline: 10px solid orange;*/
 	position: absolute;
 	right: calc(-0.5em - 1px);
 }
