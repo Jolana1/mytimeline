@@ -308,14 +308,18 @@ nav > ul li a:hover {
 }
 }
 
-.timeline-container border-right: 2px solid #fff;
-/*overflow: auto;*/
-width: 50%;
-position: relative;
-right: -1px;
-.clear;
+.timeline .row timeline-container {
+	border-right: 2px solid #fff;
+	/*overflow: auto;*/
+	width: 50%;
+	position: relative;
+	right: -1px;
+}
 
-
+.timeline .row .timeline-container:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .timeline .row article {
@@ -323,26 +327,28 @@ right: -1px;
 	padding: 1em;
 	background-color: #7db9ff;
 }
-	*:first-child {
-		margin-top: 0;
-	}
 
-.timeline .row article	*:last-child {
-		margin-bottom: 0;
-	}
+.timeline .row article *:first-child {
+	margin-top: 0;
+}
 
-	.timeline .row article:before {
-		content: "";
-		display: block;
-		width: 1em;
-		height: 1em;
-		outline: 10px solid orange;
-		position: absolute;
-		right: -"calc(-0.5em - 1px)";
-	}
+.timeline .row article *:last-child {
+	margin-bottom: 0;
+}
+
+.timeline .row article:before {
+	content: "";
+	display: block;
+	width: 1em;
+	height: 1em;
+	outline: 10px solid orange;
+	position: absolute;
+	right: calc(-0.5em - 1px);
+}
+
 .clear:after {
-		content: "";
-		display: table;
-		clear: both;
+	content: "";
+	display: table;
+	clear: both;
 
-	}
+}
