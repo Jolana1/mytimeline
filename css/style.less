@@ -321,6 +321,16 @@ section {
 				left: -1px;
 				right: auto;
 			}
+
+			article {
+				&:before {
+					left: - "calc(-0.5em - 1px)";
+					right: auto;
+
+
+
+				}
+			}
 		}
 
 		.timeline-container {
@@ -352,10 +362,11 @@ section {
 				display: block;
 				width: 1em;
 				height: 1em;
-				outline: 10px solid orange;
+				//outline: 10px solid orange;
 				position: absolute;
-				//right: -"calc(-0.5em - 1px)";
-				right: calc(-0.5em - 1px);
+				right: - "calc(-0.5em - 1px)";
+				background-color: @brand;
+				border-radius: .5em;
 			}
 		}
 	}
