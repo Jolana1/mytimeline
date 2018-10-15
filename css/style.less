@@ -345,10 +345,10 @@ section {
 		}
 
 		article {
-			margin: 1em;
+			margin: 1em 2em;
 			padding: 1em;
 			background-color: @brand;
-
+            //position: relative;
 			*:first-child {
 				margin-top: 0;
 			}
@@ -367,6 +367,7 @@ section {
 				background-color: @brand;
 				border-radius: .5em;
 
+
 			}
 
 			&:after {
@@ -375,16 +376,21 @@ section {
 				width: 1em;
 				height: 1em;
 				position: absolute;
-				right: 0;
+				right: 1em;
+				top: 1em;
 				//background-color: @brand;
 				border-top: .5em solid transparent;
 				border-bottom: .5em solid transparent;
 				border-right: .5em solid transparent;
 				border-left: .5em solid @brand;
+
 			}
 		}
 	}
 }
+.outline {
+	outline:  10px solid orange;
+	}
 
 .clear {
 	&:after {
