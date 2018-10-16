@@ -313,6 +313,7 @@ section {
 	.clear;
 
 	.row {
+		clear: both;
 		&:nth-of-type(even) {
 			.timeline-container {
 				float: right;
@@ -326,7 +327,15 @@ section {
 				&:before {
 					left: - "calc(-0.5em - 1px)";
 					right: auto;
+					top: 2em;
+				}
 
+				&:after {
+					left: 1em;
+					top: 2em;
+					right: auto;
+					border-left: .5em solid transparent;
+					border-right: .5em solid @brand;
 
 
 				}
@@ -334,28 +343,39 @@ section {
 		}
 
 		.timeline-container {
-			border-right: 2px solid #fff;
-			//overflow: auto;
+			border-right: 2px solid #fff; //overflow: auto;
 			width: 50%;
 			position: relative;
 			right: -1px;
 			.clear;
-
-
 		}
 
 		article {
 			margin: 1em 2em;
-			padding: 1em;
-			background-color: @brand;
+			padding: 0;
+			background-color: #fff;
+			color: @brand;
 
-			//position: relative;
+			h3{
+				background-color: @brand; //position: relative;
+				color: #fff;
+				margin: 0;
+				padding: .5em 1em;
+			}
+
+			p{
+				margin: 1em;
+				padding-bottom: 1em;
+
+			}
+
 			*:first-child {
 				margin-top: 0;
 			}
 
 			*:last-child {
 				margin-bottom: 0;
+
 			}
 
 			&:before {
@@ -365,6 +385,7 @@ section {
 				height: 1em;
 				position: absolute;
 				right: - "calc(-0.5em - 1px)";
+				top: 1em;
 				background-color: @brand;
 				border-radius: .5em;
 
