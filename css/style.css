@@ -350,7 +350,7 @@ nav > ul li a:hover {
 	.timeline .row article {
 	margin: 1em 2em;
 }
-.timeline .row article h1 {
+.timeline .row article h3 {
 	background-color: #7db9ff;
 	color: #fff;
 	margin: 0;
