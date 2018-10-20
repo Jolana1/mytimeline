@@ -304,7 +304,7 @@ nav > ul li a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-	.timeline .row:nth-of-type(even) .timeline-container
+	.timeline .row:nth-of-type(even) .timeline-container{
 	float: right;
 	border-right: none;
 	border-left: 2px solid #fff;
@@ -350,7 +350,7 @@ nav > ul li a:hover {
 	.timeline .row article {
 	margin: 1em 2em;
 }
-.timeline .row article h3 {
+.timeline .row article h1 {
 	background-color: #7db9ff;
 	color: #fff;
 	margin: 0;
