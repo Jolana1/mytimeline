@@ -314,56 +314,67 @@ section {
 
 	.row {
 		clear: both;
-		&:nth-of-type(even) {
-			.timeline-container {
-				float: right;
-				border-right: none;
-				border-left: 2px solid #fff;
-				left: -1px;
-				right: auto;
-			}
 
-			article {
-				&:before {
-					left: - "calc(-0.5em - 1px)";
+		@media @xs {
+			&:nth-of-type(even) {
+				.timeline-container {
+					float: right;
+					border-right: none;
+					border-left: 2px solid #fff;
+					left: -1px;
 					right: auto;
-					top: 2em;
 				}
 
-				&:after {
-					left: 1em;
-					top: 2em;
-					right: auto;
-					border-left: .5em solid transparent;
-					border-right: .5em solid @brand;
+				article {
+					&:before {
+						left: - "calc(-0.5em - 1px)";
+						right: auto;
+						top: 2em;
+					}
+
+					&:after {
+						left: 1em;
+						top: 2em;
+						right: auto;
+						border-left: .5em solid transparent;
+						border-right: .5em solid @brand;
 
 
+					}
 				}
 			}
 		}
 
 		.timeline-container {
 			border-right: 2px solid #fff; //overflow: auto;
-			width: 50%;
 			position: relative;
 			right: -1px;
 			.clear;
+
+			@media @xs {
+				width: 50%;
+
+			}
 		}
 
 		article {
-			margin: 1em 2em;
+			margin: 0 2em 1em 2em;
 			padding: 0;
 			background-color: #fff;
 			color: @brand;
+			@media @xs {
+				margin: 1em 2em;
+			}
 
-			h3{
+
+			h3 {
 				background-color: @brand; //position: relative;
 				color: #fff;
 				margin: 0;
 				padding: .5em 1em;
 			}
 
-			p{
+			p {
 				margin: 1em;
 				padding-bottom: 1em;
 
@@ -410,24 +421,25 @@ section {
 		}
 	}
 }
-.classmq{
+
+.classmq {
 	border: 1px solid green;
 
-	@media @sm{
+	@media @sm {
 		border: 1px solid red;
 
 	}
 
 
 
-.outline {
-	outline: 10px solid orange;
-}
-
-.clear {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
+	.outline {
+		outline: 10px solid orange;
 	}
-}
+
+	.clear {
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}

@@ -299,20 +299,33 @@ nav > ul li a:hover {
 	background-color: #7db9ff;
 }
 
-.timeline .row timeline-container:nth-of-type(even) {
+.timeline .row {
+	clear: both;
+}
 
+@media only screen and (min-width: 768px) {
+	.timeline .row:nth-of-type(even) .timeline-container {
 	float: right;
 	border-right: none;
 	border-left: 2px solid #fff;
 	left: -1px;
 	right: auto;
-
 }
-
+.timeline .row:nth-of-type(even) article:before {
+	left: calc(-0.5em - 1px);
+	right: auto;
+	top: 2em;
+	}
+.timeline .row:nth-of-type(even) article:after {
+	left: 1em;
+	right: auto;
+	top: 2em;
+	border-left: .5em solid transparent;
+	border-right: 0.5em solid #7db9ff;
+	}
+}
 .timeline .row timeline-container {
 	border-right: 2px solid #fff;
-	/*overflow: auto;*/
-	width: 50%;
 	position: relative;
 	right: -1px;
 }
@@ -322,13 +335,31 @@ nav > ul li a:hover {
 	display: table;
 	clear: both;
 }
-
-.timeline .row article {
-	margin: 1em;
-	padding: 1em;
-	background-color: #7db9ff;
+@media only screen and (min-width: 768px) {
+.timeline .row .timeline-container 	{
+	width: 50%;
 }
-
+	}
+.timeline .row article {
+	margin:0 2em 1em 2em;
+	padding: 0;
+	background-color:#fff;
+	color: #7db9ff;
+}
+@media only screen and (min-width: 768px) {
+	.timeline .row article {
+	margin: 1em 2em;
+}
+.timeline .row article h3 {
+	background-color: #7db9ff;
+	color: #fff;
+	margin: 0;
+	padding: .5em 1em;
+}
+.timeline .row article p {
+	margin: 1em;
+	padding-bottom: 1em;
+}
 .timeline .row article *:first-child {
 	margin-top: 0;
 }
@@ -345,9 +376,10 @@ nav > ul li a:hover {
 	position: absolute;
 	right: calc(-0.5em - 1px);
 	top: 1em;
-	background-color:#7db9ff;
+	background-color: #7db9ff;
 	border-radius: .5em;
 }
+
 .timeline .row article:after {
 	content: "";
 	display: block;
@@ -356,26 +388,27 @@ nav > ul li a:hover {
 	position: absolute;
 	right: 1em;
 	top: 1em;
-	border-top:.5em solid transparent;
+	border-top: .5em solid transparent;
 	border-bottom: .5em solid transparent;
 	border-right: .5em solid transparent;
 	border-left: .5em solid #7db9ff;
 }
 
 
-.classmq{
+.classmq {
 	border: 1px solid green;
-	}
-@media only screen and (min-width: 1024px){
-	.classmq{
-	border: 1px solid red;
+}
+
+@media only screen and (min-width: 1024px) {
+	.classmq {
+		border: 1px solid red;
 	}
 }
 
 
 .outline {
 	outline: 10px solid orange;
-	}
+}
 
 .clear:after {
 	content: "";
