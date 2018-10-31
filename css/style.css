@@ -52,7 +52,7 @@
 	font-family: 'Material Icons';
 	font-style: normal;
 	font-weight: 400;
-	src: url(https: //fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNZ.ttf) format('truetype');
+	src: url('https://fonts.googleapis.com/icon?family=Material+Icons') format('woff');
 }
 
 .material-icons {
@@ -229,20 +229,16 @@ input {
 	border: none;
 	border-bottom: 1px solid black;
 }
-
-.triangle {
-	height: 60px;
-	border-left: 33vw solid #fff;
-	border-bottom: 60px solid #4aacf4;
-	border-right: 67vw solid #fff;
+p img[style*="float:left"],
+p img[style*="float:left"]{
+	padding-left: 0 !important;
+	margin-left: 0 !important;
 }
-
-.white-section .triangle {
-	border-left: 33vw solid #4aacf4;
-	border-bottom: 60px solid #fff;
-	border-right: 67vw solid #4aacf4;
+p img[style*="float:right"],
+p img[style*="float:right"]{
+	padding-left: 0 !important;
+	margin-left: 0 !important;
 }
-
 nav {
 	position: fixed;
 	width: 100%;
@@ -298,12 +294,40 @@ nav > ul li a {
 nav > ul li a:hover {
 	background-color: #7db9ff;
 }
+.triangle:before {
+	top: -30px;
+	border-left: 33vw solid transparent;
+	border-top: none;
+	border-bottom:30px solid #7db9ff;
+	border-right: 67vw solid transparent;
+}
+.white-section .triangle:before {
 
+	border-top: 30px solid #fff;
+
+}
+.triangle:after {
+	bottom: 30px;
+	border-left: 67vw solid transparent;
+	border-top: 30px solid #7db9ff;
+	border-bottom: none;
+	border-right: 33vw solid transparent;
+}
+
+.white-section .triangle:after {
+	border-top: 30px solid #fff;
+
+}
+.timeline:after{
+	content: "";
+	display: table;
+	clear: both;
+}
 .timeline .row {
 	clear: both;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width:1023px)  {
 	.timeline .row:nth-of-type(even) .timeline-container{
 	float: right;
 	border-right: none;
@@ -335,7 +359,12 @@ nav > ul li a:hover {
 	display: table;
 	clear: both;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)and ( max-width: 1023px) {
+.timeline .row .timeline-container 	{
+	width: 50%;
+}
+	}
+@media only screen and (min-width: 1440px)and  {
 .timeline .row .timeline-container 	{
 	width: 50%;
 }
@@ -346,7 +375,7 @@ nav > ul li a:hover {
 	background-color:#fff;
 	color: #7db9ff;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)and ( max-width: 1023px) {
 	.timeline .row article {
 	margin: 1em 2em;
 }
